@@ -16,11 +16,14 @@
 
 		<aside id="lisere">
 			<!--La zone aside comporte la photo, les informations de contact, un "à propos" et les loisirs sous forme d'icones-->
+			<!--En format mobile, la photo n'y apparait plus et vient se placer dans "Head"-->
 
-			<article id="cadre_photo">
-				<h3>Ma Photo</h3><a href="images/photo_id.jpg"><img src="images/photo_id_mini.jpg" alt="Photo d'identité de Hugo Hémon" class="photo"/></a>
-			</article> <!--Titre h3 de la photo caché en CSS, recommandé de mettre un titre-->
-			<article id="contact" title="Contact">
+			<article id="cadre_photo"><!--Contient un titre caché et un lien sous forme de photo-->
+				<h3>Ma Photo</h3><!--Titre h3 de la photo caché en CSS, recommandé de mettre un titre-->
+				<a href="images/photo_id.jpg"><img src="images/photo_id_mini.jpg" alt="Photo d'identité de Hugo Hémon" class="photo"/></a>
+			</article> 
+			
+			<article id="contact" title="Contact"><!--Contient un titre, une liste-->
 				<h3 class="titre_aside">Contact</h3>
 				<ul class="liste_contact">
 					<li>Adresse<br/>Fouesnant, France</li>
@@ -30,11 +33,13 @@
 					<li>Skype<br/>@hugo_hemon</li>
 				</ul>
 			</article>
-			<article id="a_propos" title="A propos de moi">
+
+			<article id="a_propos" title="A propos de moi"><!--Contient un titre et un paragraphe-->
 				<h3 class="titre_aside_gras">à propos de moi</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi aliquam quos et architecto amet praesentium quis fugit nemo sint, cum pariatur veniam reprehenderit debitis dolor voluptatibus ex alias atque reiciendis sapiente quaerat laborum quasi asperiores, ad quam. Fuga error labore, consequuntur qui fugit, repellat possimus sit in laborum odit minima.</p>
 			</article>
-			<article id="loisirs" title="Loisirs">
+
+			<article id="loisirs" title="Loisirs"><!--Contient un titre et un div encadrant des icones font-awesome-->
 				<h3 class="titre_aside">Loisirs</h3>
 				<div class="icones_loisirs">
 					<span class="fa-stack fa-2x"><i class="far fa-circle fa-stack-2x icon-background"></i><i class="fa fa-gamepad fa-sm fa-stack-1x"></i></span>
@@ -46,31 +51,39 @@
 		</aside>
 
 		<div id="page_centrale">
-			<!--La zone "page centrale" comporte le header, la section principale et le footer-->	
+			<!--La zone "page centrale" comporte le header, la section principale-->	
 
-			<header>
-				<!--L'entête comporte le nom du CV & le titre du CV -->
-				<h1><span id="prenom">Hugo</span> Hémon</h1>
-				<div id="titre"><h2><span id="ligne_dev">Dével</span>oppeur web freelance</h2></div>
-				<article id="cadre_photo_header"><!---N'apparait que sur mobile-->
+			<header><!--En version desktop celui ci ne contient que le h1+h2 / en version mobile la photo vient s'ajouter-->
+
+				<h1><span id="prenom">Hugo</span> Hémon</h1> <!--le span permet de différencier le style du prénom-->
+				<div id="titre"><h2><span id="ligne_dev">Dével</span>oppeur web freelance</h2></div> <!--le span permet de différencier le style d'une partie du mot Développeur-->
+
+				<!---N'apparait que sur mobile-->
+				<article id="cadre_photo_header">
 					<h3>Ma Photo</h3><a href="images/photo_id.jpg"><img src="images/photo_id_mini.jpg" alt="Photo d'identité de Hugo Hémon" class="photo_header"/></a>
 				</article>
+				<!---N'apparait que sur mobile-->
+
 			</header>
 
-			<section>
-				<h2>Section principale</h2><!--Titre h2 de la section, recommandé de mettre un titre-->
-				<!--Cette section est la principal et regroupe les 3 volets principaux du CV sous forme d'article-->
+			<section><!--Cette section est la principal et regroupe un titre et les 3 volets principaux du CV sous forme d'article (Formation+Experience+Recommandations)-->
+				<h2>Section principale</h2><!--Titre h2 de la section caché, recommandé de mettre un titre-->
+
+				<!--Chaque article (article_page) contient : un titre (titre_page) + une liste (liste_page)-->
+				<!--Chaque élément d'une liste contient un div "item_..."-->
+				<!--Un "item_" contient un div "bloc puce" + un div "paragraphe"-->
+				<!--Un div "bloc puce" regroupant un div "puces_page" (icone fontawesome) + un div "année"-->
 
 				<article class="article_page" title="Formation">
 					<div class="titre_page"><div class="icone_article"><i class="fas fa-graduation-cap"></i></div><h3>Formation</h3></div>
 					<ul class="liste_page">
 						<li>
 							<div class="item_formation"><!--Création d'un div pour lui appliquer flex, appliquer flex directement à "li" fait disparaitre les puces-->
-								<div class="bloc_puces">
-									<div class="puces_page">
+								<div class="bloc_puces"><!--L'image de la puce + l'année-->
+									<div class="puces_page"><!--L'image de la puce-->
 										<i class="far fa-dot-circle"></i>
 									</div>
-									<div class="année">
+									<div class="année"><!--L'année-->
 										2020<br/>
 									</div>
 								</div>
@@ -83,7 +96,7 @@
 							</div>
 						</li>
 						<li>
-							<div class="item_formation"><!--Création d'un div pour lui appliquer flex, appliquer flex directement à "li" fait disparaitre les puces-->
+							<div class="item_formation">
 								<div class="bloc_puces">
 									<div class="puces_page">
 										<i class="fas fa-circle fa-xs"></i>
@@ -96,12 +109,12 @@
 								<div class="paragraphe">
 									<h4>Université de Bretagne Occidentale (UBO)</h4><br/>
 									<h5>Master 2 Comptabilité Contrôle Audit</h5><br/>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis voluptatibus non quos odit aut eveniet deleniti laboriosam facilis, qui ipsam iste tempore at officiis consectetur a, possimus numquam excepturi.
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis voluptatibus non quos odit aut eveniet deleniti laboriosam facilis, qui ipsam iste tempore at officiis consectetur a, possimus numquam excepturi.</p>
 								</div>
 							</div>
 						</li>
 						<li>
-							<div class="item_formation"><!--Création d'un div pour lui appliquer flex, appliquer flex directement à "li" fait disparaitre les puces-->
+							<div class="item_formation">
 								<div class="bloc_puces">
 									<div class="puces_page">
 										<i class="fas fa-circle fa-xs"></i>
@@ -114,12 +127,12 @@
 								<div class="paragraphe">
 									<h4>Université de Bretagne Occidentale (UBO)</h4><br/>
 									<h5>Licence Economie Gestion</h5><br/>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis voluptatibus non quos odit aut eveniet deleniti laboriosam facilis, qui ipsam iste tempore at officiis consectetur a, possimus numquam excepturi.
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis voluptatibus non quos odit aut eveniet deleniti laboriosam facilis, qui ipsam iste tempore at officiis consectetur a, possimus numquam excepturi.</p>
 								</div>
 							</div>
 						</li>
 						<li>
-							<div class="item_formation"><!--Création d'un div pour lui appliquer flex, appliquer flex directement à "li" fait disparaitre les puces-->
+							<div class="item_formation">
 								<div class="bloc_puces">
 									<div class="puces_page">
 										<i class="fas fa-circle fa-xs"></i>
@@ -132,12 +145,12 @@
 								<div class="paragraphe">
 									<h4>Liverpool Hope University</h4><br/>
 									<h5>DUETI</h5><br/>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis voluptatibus non quos odit aut eveniet deleniti laboriosam facilis, qui ipsam iste tempore at officiis consectetur a, possimus numquam excepturi.
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis voluptatibus non quos odit aut eveniet deleniti laboriosam facilis, qui ipsam iste tempore at officiis consectetur a, possimus numquam excepturi.</p>
 								</div>
 							</div>
 						</li>
 						<li>
-							<div class="item_formation"><!--Création d'un div pour lui appliquer flex, appliquer flex directement à "li" fait disparaitre les puces-->
+							<div class="item_formation">
 								<div class="bloc_puces">
 									<div class="puces_page">
 										<i class="fas fa-circle fa-xs"></i>
@@ -150,7 +163,7 @@
 								<div class="paragraphe">
 									<h4>IUT de Quimper</h4><br/>
 									<h5>DUT Techniques de Commercialisation</h5><br/>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis voluptatibus non quos odit aut eveniet deleniti laboriosam facilis, qui ipsam iste tempore at officiis consectetur a, possimus numquam excepturi.
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis voluptatibus non quos odit aut eveniet deleniti laboriosam facilis, qui ipsam iste tempore at officiis consectetur a, possimus numquam excepturi.</p>
 								</div>
 							</div>
 						</li>
@@ -198,7 +211,7 @@
 					</ul>
 				</article>
 
-				<article class="article_page" title="Recommandations">
+				<article class="article_page" title="Recommandations"> <!--Cet article ne contient pas de liste, uniquement un bloc titre + un bloc item regroupant les différentes entrées dans des balises <p> -->
 					<div class="titre_page"><div class="icone_article"><i class="fas fa-pencil-alt"></i></div><h3>Recommandations</h3></div>
 					<div class="item_recommand">
 						<p><span>PIERRE MARIE GORIOUX</span><br/><span>PDG Gorioux & Associés</span><br/>Téléphone : 02 98 55 27 48<br/>Email : <a href="mailto:pmgorioux@gorioux.com">pmgorioux@gorioux.com</a></p>

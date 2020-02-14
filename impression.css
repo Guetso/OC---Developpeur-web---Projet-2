@@ -128,7 +128,7 @@ li
 
 #a_propos
 {
-	flex:2;
+	flex:1;
 }
 
 aside p
@@ -231,7 +231,7 @@ section h2
 
 .liste_page /* = balise ul*/
 {
-	margin-left: 20px;
+	margin-left: 10px;
 	padding-left: 0px;
 }
 
@@ -239,7 +239,7 @@ section h2
 {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .bloc_puces
