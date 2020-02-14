@@ -33,6 +33,7 @@
 {
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 15px;
+	background-color: #ECEFF1;
 	color: rgba(66,66,66 ,1);
 	display: flex; /*Le bloc page en flexbox va permettre d'organiser l'aside et la section principale horizontalement*/
 	width: 900px; 
@@ -44,6 +45,10 @@ li
 	list-style-type: none; /* Toutes lies listes de la page utiliserton des puces sous forme d'image*/
 }
 
+a
+{
+	color: #212121;
+}
 
 /*----ASIDE------*/
 
@@ -53,7 +58,7 @@ li
 	width: 270px; /*le lisere a une taille fixe*/
 	display: flex;
 	flex-direction: column;
-	background-color: #FFC400;
+	background-color: #C8E6C9;
 }
 
 #cadre_photo h3
@@ -65,7 +70,7 @@ li
 {
 	align-self: center; /* seule la photo est centrée dans le conteneur flex #lisere*/
 	margin-top: 30px;
-	border: solid 3px rgba(158,157,36 ,0.3);
+	border: solid 3px rgba(97,97,97 ,0.3);
 	border-radius: 50%;
 	width: 150px;
 	height: 150px; /*le radius à 50% + width et height de même valeur = rond*/
@@ -81,16 +86,15 @@ li
 {
 	display: block;
 	width: 120%;
-	margin-top: -25px; /* Cadrage de la photo*/
-	margin-left: -12px;
+	transform: translate(-10px, -25px);
 }
 
 .titre_aside
 {
 	text-align: center;
 	text-transform: uppercase;
-	color:#FFC400;
-	background-color: rgba(66,66,66 ,1);
+	color:#C8E6C9;
+	background-color: #616161;
 	padding: 2%;
 	font-family: open_sansregular, Arial, sans-serif;
 	font-weight:normal;
@@ -101,8 +105,8 @@ li
 {
 	text-align: center;
 	text-transform: uppercase;
-	color:#FFC400;
-	background-color: rgba(66,66,66 ,1);
+	color:#C8E6C9;
+	background-color: #616161;
 	padding: 2%;
 	font-family: open_sanssemibold, Arial, sans-serif;
 	font-weight:normal;
@@ -137,6 +141,7 @@ aside p
 	display: flex;
 	justify-content: space-around;
 	margin-bottom: 5%;
+	color: #616161;
 }
 
 
@@ -164,7 +169,7 @@ h1
 #prenom
 {
 	font-weight: 400;
-	color: #FFC400;
+	color: #4CAF50;
 }
 
 h2
@@ -179,7 +184,7 @@ h2
 #ligne_dev
 {
 	border-bottom:solid;
-	border-color:#FFC400;
+	border-color:#4CAF50;
 }
 
 #cadre_photo_mobile /*N'apparait que sur version mobile*/
@@ -216,7 +221,7 @@ section h2
 	font-size: 1.5em;
 	font-weight: bold;
 	display: flex;
-	border-bottom: solid #FFC400;
+	border-bottom: solid #4CAF50;
 }
 
 .titre_page h3
@@ -228,7 +233,7 @@ section h2
 
 .icone_article
 {
-	color: #FFC400;
+	color: #4CAF50;
 }
 
 .titre_page div /*Gère l'espacement entre l'icone et le titre des articles*/
@@ -257,7 +262,7 @@ section h2
 
 .puces_page
 {
-	color: #FFC400;
+	color: #4CAF50;
 	font-size: 0.8em;
 	margin-right: 10px;
 }
@@ -341,18 +346,18 @@ p span
 		margin: auto;
 		display: flex;
 		flex-direction: column;
-		background-color: #FFC400;
+		background-color: #C8E6C9;
 	}
 
 	#prenom
 	{
-		color: white;
+		color: #2E7D32;
 	}
 
 	#ligne_dev
 	{
 		border-bottom:solid;
-		border-color:white;
+		border-color:#2E7D32;
 	}
 
 	h1, h2
@@ -381,8 +386,8 @@ p span
 	.photo_header
 	{
 		width: 120%;
-		margin-top: -75px; /* Pourquoi un margin bottom ne fonctionne pas ?*/
-		margin-left: -12px;
+		transform: translate(-12px, -80px);
+		
 	}
 
 
@@ -471,8 +476,7 @@ p span
 		{
 			display: block;
 			width: 120%;
-			margin-top: -94px; /* Pourquoi un margin bottom ne fonctionne pas ?*/
-			margin-left: -12px;
+			transform: translate(-12px, -100px);
 		}
 
 		h1, h2

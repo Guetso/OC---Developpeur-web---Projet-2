@@ -32,6 +32,7 @@
 body
 {
 	margin: 0;
+	padding: 0;
 }
 
 #bloc_page
@@ -40,12 +41,18 @@ body
 	font-size: 10px;
 	color: rgba(66,66,66 ,1);
 	display: flex; /*Le bloc page en flexbox va permettre d'organiser l'aside et la section principale horizontalement*/ 
-	margin:0; /*on va centrer la page et lui fixer une largeur de 900px, inutile qu'elle prenne toute la largeur de l'écran*/
+	margin:0;
 }
 
 li
 {
 	list-style-type: none;
+}
+
+a
+{
+	text-decoration: none;
+	color: rgba(66,66,66 ,1);
 }
 
 /*----ASIDE------*/
@@ -59,7 +66,7 @@ li
 	display: flex;
 	flex-direction: column;
 	background-color: rgba(230,81,0 ,1);
-	border-right: solid rgba(230,81,0 ,1);
+	border-right: solid #1B5E20;
 }
 
 #cadre_photo h3
@@ -71,10 +78,10 @@ li
 {
 	align-self: center; /* seule la photo est centrée dans le conteneur flex*/
 	margin-top: 0px;
-	border: solid 3px rgba(230,81,0 ,0.5);
+	border: solid 3px #1B5E20;
 	border-radius: 50%;
-	width: 150px;
-	height: 150px; /*le radius à 50% + width et height de même valeur = rond*/
+	width: 130px;
+	height: 130px; /*le radius à 50% + width et height de même valeur = rond*/
 	overflow: hidden; /*la photo ne dépasse pas du cadre*/
 }
 
@@ -97,7 +104,8 @@ li
 	text-transform: uppercase;
 	color:rgba(66,66,66 ,1);
 	background-color: rgba(66,66,66 ,1);
-	padding: 5px;
+	padding: 0;
+	margin-bottom: 0;
 	font-family: open_sansregular, Arial, sans-serif;
 	font-weight:normal;
 	font-size: 1.4em;
@@ -109,7 +117,8 @@ li
 	text-transform: uppercase;
 	color:rgba(66,66,66 ,1);
 	background-color: rgba(66,66,66 ,1);
-	padding: 5px;
+	padding: 0;
+	margin-bottom: 0;
 	font-family: open_sanssemibold, Arial, sans-serif;
 	font-weight:normal;
 	font-size: 1.4em;
@@ -118,7 +127,10 @@ li
 .liste_contact
 {
 	padding-left: 8%;
+	margin-top: 0;
+	margin-bottom: 0;
 	font-weight: bold;
+	font-size: 1.3em;
 }
 
 .liste_contact li
@@ -128,7 +140,12 @@ li
 
 #a_propos
 {
-	flex:1;
+	flex:0.5;
+}
+
+#a_propos p
+{
+	font-size: 1.2em;
 }
 
 aside p
@@ -141,6 +158,7 @@ aside p
 {
 	display: flex;
 	justify-content: space-around;
+	color: #1B5E20;
 	margin-bottom: 25px;
 }
 
@@ -170,7 +188,7 @@ h1
 #prenom
 {
 	font-weight: 400;
-	color: rgba(230,81,0 ,1);
+	color: #1B5E20;
 }
 
 h2
@@ -185,7 +203,7 @@ h2
 #ligne_dev
 {
 	border-bottom:solid;
-	border-color:rgba(230,81,0 ,1);
+	border-color:#1B5E20;
 }
 
 /*----PAGE CENTRALE------*/
@@ -200,15 +218,20 @@ section h2
 	display: none;/* Le titre n'apparait pas, le titre est néanmoins recommandé par le service de validation W3C */
 }
 
+article p
+{
+	margin-bottom: 0;
+}
+
 .titre_page /*Contient l'icone et le titre de chaque article*/
 {
 	margin-left: 20px;
-	padding-bottom: 10px;
+	padding-bottom: 0px;
 	text-transform: uppercase;
 	font-size: 1.5em;
 	font-weight: bold;
 	display: flex;
-	border-bottom: solid rgba(230,81,0 ,1);
+	border-bottom: solid #1B5E20;
 }
 
 .titre_page h3
@@ -220,7 +243,7 @@ section h2
 
 .icone_article
 {
-	color: rgba(230,81,0 ,1);
+	color: #1B5E20;
 }
 
 
@@ -239,7 +262,8 @@ section h2
 {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 10px;
+	margin-bottom: 0;
+	margin-top: 0;
 }
 
 .bloc_puces
@@ -250,9 +274,15 @@ section h2
 
 .puces_page
 {
-	color: rgba(230,81,0 ,1);
+	color: #1B5E20;
 	font-size: 0.8em;
 	margin-right: 10px;
+}
+
+.année
+
+{
+	font-size: 1.2em;
 }
 
 h4, h5
@@ -267,7 +297,7 @@ h4, h5
 h4
 {
 	font-weight: bold;
-	font-size: 1.1em;
+	font-size: 1.3em;
 	text-transform: uppercase;
 
 }
@@ -275,12 +305,13 @@ h4
 h5
 {
 	font-weight: normal;
-	font-size: 1em;
+	font-size: 1.2em;
 }
 
 p
 {
 	margin-top: 0;
+	font-size: 1.1em;
 }
 
 .item_formation div /*les paragraphes dans un bloc formation ne doivent pas prendre toute la place*/
@@ -301,6 +332,7 @@ p
 	margin-left: 50px;
 	margin-right: 50px;
 	margin-top: 10px;
+	font-size: 1.2em;
 }
 
 p span
@@ -308,14 +340,3 @@ p span
 	font-weight: bold;
 }
 
-
-
-/*----FOOTER------*/
-
-
-footer
-{
-	display: none;
-	width: 270px;
-	background-color: rgba(230,81,0 ,1);
-}
