@@ -315,7 +315,9 @@ p span
 
 /*----------------RESPONSIVE DESIGN-------------------------------*/
 
-@media all and (max-device-width: 768px)
+/*----------------TABLETTES---------------------------------------*/
+
+@media all and (max-device-width: 900px)
 {
 
 	/*----ORGANISATON GENERALE DE LA PAGE------*/
@@ -442,3 +444,79 @@ p span
 	{
 		display: none;
 	}
+
+
+/*----------------SMARTPHONES--------------------------------------*/
+
+@media all and (max-device-width: 576px)
+{
+	
+	#bloc_page
+	{
+		font-size: 20px;
+	}
+
+	.photo_header
+	{
+	display: block;
+	width: 120%;
+	margin-top: -94px; /* Pourquoi un margin bottom ne fonctionne pas ?*/
+	margin-left: -12px;
+	}
+
+	h1, h2
+	{
+		margin-left: 0;
+	}
+
+	h3
+	{
+		margin-left: 0;
+	}
+
+	.titre_page
+	{
+		margin: 0;
+		justify-content: center;
+	}
+
+	.liste_page
+	{
+		margin-left: 0;
+	}
+
+	.item_formation, .item_professionnel
+	{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.bloc_puces
+	{
+		align-self: flex-start;
+		margin-bottom: 10px;
+	}
+
+	.paragraphe
+	{
+		text-align: justify;
+	}
+
+	.liste_contact
+	{
+		display: block;
+	}
+
+	.liste_contact li
+	{
+		text-align: center;
+	}
+
+	.item_recommand
+	{
+		flex-direction: column;
+		align-items: center;
+	}
+
+
+}
