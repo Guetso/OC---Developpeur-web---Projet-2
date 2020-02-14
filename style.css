@@ -510,7 +510,7 @@ p span
 
 		.bloc_puces
 		{
-			align-self: flex-start;
+			align-self: center;
 			margin-bottom: 3%;
 		}
 
@@ -521,13 +521,14 @@ p span
 
 		.paragraphe
 		{
-			text-align: justify;
+			text-align: center;
 		}
 
 		.paragraphe p
 
 		{
 			margin-top: 3%;
+			text-align: justify;
 		}
 
 		.liste_contact
