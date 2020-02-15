@@ -12,16 +12,15 @@
 <body>
 
 	<div id="bloc_page">
-		<!--Englobe tous le contenu de la page. Permets de fixer facilement les dimensions de la page et de centrer le site Contient l'aside et la page centrale-->
+		<!--Englobe tous le contenu de la page. Permets de fixer facilement les dimensions de la page et de centrer le site Contient l'aside "lisere" et la section page centrale-->
 
 		<aside id="lisere">
 			<!--La zone aside comporte la photo, les informations de contact, un "à propos" et les loisirs sous forme d'icones-->
 			<!--En format mobile, la photo n'y apparait plus et vient se placer dans "Head"-->
 
-			<article id="cadre_photo"><!--Contient un titre caché et un lien sous forme de photo-->
-				<h3>Ma Photo</h3><!--Titre h3 de la photo caché en CSS, recommandé de mettre un titre-->
+			<div id="cadre_photo"><!--Contient un lien sous forme de photo-->
 				<a href="images/photo_id.jpg"><img src="images/photo_id_mini.jpg" alt="Photo d'identité de Hugo Hémon" class="photo"/></a>
-			</article> 
+			</div> 
 			
 			<article id="contact" title="Contact"><!--Contient un titre, une liste-->
 				<h3 class="titre_aside">Contact</h3>
@@ -36,7 +35,7 @@
 
 			<article id="a_propos" title="A propos de moi"><!--Contient un titre et un paragraphe-->
 				<h3 class="titre_aside_gras">à propos de moi</h3>
-				<p>Suite à une formation en marketing, puis en gestion et comptabilité, et parmi toutes les opportunités qu'offraient mes nouvelles compétences je décida de travailler en tant que collaborateur comptable au sein d'un cabinet d'expertise. Après plusieurs années à ce poste j'ai souhaité me reconvertir et revenir à mes premières aspirations : l'informatique et le Web. J'ai validé avec succès la formation "Développeur Web" au sein de OpenClassrooms, et me lance aujourd'hui en tant que développeur web freelance.<br/> Fort de mes compétences en développement, couplées à mes connaissances du monde de l'entreprise je suis capable d'offrir des solutions adaptées aux besoins de mes clients.</p>
+				<p>Suite à une formation en marketing, puis en gestion et comptabilité, je fus embauché en tant que collaborateur comptable au sein d'un cabinet d'expertise comptable. Après plusieurs années à ce poste j'ai souhaité me reconvertir et revenir à mes premières aspirations : l'informatique et le web. J'ai validé avec succès la formation "Développeur Web" au sein de OpenClassrooms, et me lance aujourd'hui en tant que développeur web freelance.<br/> Fort de mes compétences en développement, couplées à mes connaissances du monde de l'entreprise je suis capable d'offrir des solutions adaptées aux besoins de mes clients.</p>
 			</article>
 
 			<article id="loisirs" title="Loisirs"><!--Contient un titre et un div encadrant des icones font-awesome-->
@@ -50,7 +49,7 @@
 
 		</aside>
 
-		<div id="page_centrale">
+		<section id="page_centrale">
 			<!--La zone "page centrale" comporte le header, la section principale-->	
 
 			<header><!--En version desktop celui ci ne contient que le h1+h2 / en version mobile la photo vient s'ajouter-->
@@ -66,8 +65,7 @@
 
 			</header>
 
-			<section><!--Cette section est la principal et regroupe un titre et les 3 volets principaux du CV sous forme d'article (Formation+Experience+Recommandations)-->
-				<h2>Section principale</h2><!--Titre h2 de la section caché, recommandé de mettre un titre-->
+			<div id="corps_page"><!--Cette "section" est la principal et regroupe un titre et les 3 volets principaux du CV sous forme d'article (Formation+Experience+Recommandations)-->
 
 				<!--Chaque article (article_page) contient : un titre (titre_page) + une liste (liste_page)-->
 				<!--Chaque élément d'une liste contient un div "item_..."-->
@@ -91,7 +89,7 @@
 								<div class="paragraphe">
 									<h4>Openclassrooms</h4><br/>
 									<h5>Formation développeur Web (diplôme niveau 5)</h5><br/>
-									<p>Cette formation m'a permit d'acquérir les compétences de développeur web. Après avoir analysé les besoins de ses clients, le développeur web crée les fonctionnalités d'un site internet à partir d'un cahier des charges et leur propose une solution originale, sur mesure et adaptée à leurs besoins.</p>
+									<p>Cette formation m'a permis d'acquérir les compétences de développeur web. Après avoir analysé les besoins de ses clients, le développeur web crée les fonctionnalités d'un site internet à partir d'un cahier des charges et leur propose une solution originale, sur mesure et adaptée à leurs besoins.</p>
 								</div>
 							</div>
 						</li>
@@ -145,7 +143,7 @@
 								<div class="paragraphe">
 									<h4>Liverpool Hope University</h4><br/>
 									<h5>DUETI</h5><br/>
-									<p>Année Erasmus en Angleterre. Le DUETI est un diplôme de niveau bac + 3, s'effectuant après deux années de DUT. Il offre à des étudiants la possiblité de compléter leur formation universitaire et professionnelle en lui apportant une dimension internationnale.</p>
+									<p>Année Erasmus en Angleterre. Le DUETI est un diplôme de niveau bac + 3, s'effectuant après deux années de DUT. Il offre à des étudiants la possiblité de compléter leur formation universitaire et professionnelle en lui apportant une dimension internationale.</p>
 								</div>
 							</div>
 						</li>
@@ -163,7 +161,7 @@
 								<div class="paragraphe">
 									<h4>IUT de Quimper</h4><br/>
 									<h5>DUT Techniques de Commercialisation</h5><br/>
-									<p>Le DUT TC - Techniques de commercialisation forme des commerciaux polyvalents capables de mener une transaction commerciale dans son intégralité (prospection, négociation, fidélisation de la clientèle, réalisation d’un plan de communication commerciale, gestion du stock).</p>
+									<p>Le DUT TC - Techniques de commercialisation - forme des commerciaux polyvalents capables de mener une transaction commerciale dans son intégralité (prospection, négociation, fidélisation de la clientèle, réalisation d’un plan de communication commerciale, gestion du stock).</p>
 								</div>
 							</div>
 						</li>
@@ -187,7 +185,7 @@
 								<div class="paragraphe">
 									<h4>Gorioux & Associés</h4><br/>
 									<h5>Collaborateur Comptable</h5><br/>
-									<p>Gestion d'un portefeuille client sous la responsabilité de l'Expert Comptable - (Clientèle TPE/PME, BIC/BNC Révision comptable ; Déclarations fiscales (liasses fiscales, Tva, Cvae, Is…) ; Gestion de la relation clients ; Prévisionnels ;Situations intermédiaires.</p>
+									<p>Gestion d'un portefeuille client sous la responsabilité de l'Expert Comptable - Clientèle TPE/PME, BIC/BNC ; Révision comptable ; Déclarations fiscales (liasses fiscales, TVA, CVAE, IS…) ; Gestion de la relation clients ; Prévisionnels ; Situations intermédiaires.</p>
 								</div>
 							</div>
 						</li>
@@ -204,7 +202,7 @@
 								<div class="paragraphe">
 									<h4>Gorioux & Associés</h4><br/>
 									<h5>Apprenti Comptable</h5><br/>
-									<p>Année d'apprentissage dans le cadre du Master 2 CCA. Assistant direct d'un Expert Compable. Travaux de saisie comptable et de révision comptable.</p>
+									<p>Année d'apprentissage dans le cadre du Master 2 CCA. Assistant direct d'un Expert Comptable. Travaux de saisie comptable et de révision comptable.</p>
 								</div>
 							</div>
 						</li>
@@ -219,9 +217,9 @@
 					</div>	
 				</article>
 
-			</section>
+			</div>
 			
-		</div>
+		</section>
 
 	</div>
 

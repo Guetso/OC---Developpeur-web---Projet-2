@@ -36,7 +36,7 @@
 	background-color: #ECEFF1;
 	color: rgba(66,66,66 ,1);
 	display: flex; /*Le bloc page en flexbox va permettre d'organiser l'aside et la section principale horizontalement*/
-	width: 900px; 
+	max-width: 900px;
 	margin:auto; /*on va centrer la page et lui fixer une largeur de 900px, inutile qu'elle prenne toute la largeur de l'écran*/
 }
 
@@ -55,16 +55,11 @@ a
 
 #lisere
 {
-	width: 270px; /*le lisere a une taille fixe*/
+	max-width: 270px;
 	display: flex;
 	flex-direction: column;
 	background-color: #C8E6C9;
 }
-
-#cadre_photo h3
-{
-	display: none; /* Le titre n'apparait pas, le titre est néanmoins recommandé par le service de validation W3C */
-} 
 
 #cadre_photo
 {
@@ -72,8 +67,8 @@ a
 	margin-top: 30px;
 	border: solid 3px rgba(97,97,97 ,0.3);
 	border-radius: 50%;
-	width: 150px;
-	height: 150px; /*le radius à 50% + width et height de même valeur = rond*/
+	max-width: 150px;
+	max-height: 150px; /*le radius à 50% + width et height de même valeur = rond*/
 	overflow: hidden; /*la photo ne dépasse pas du cadre*/
 }
 
@@ -85,8 +80,8 @@ a
 .photo
 {
 	display: block;
-	width: 120%;
-	transform: translate(-10px, -25px);
+	max-width: 120%; /*Zoom sur la photo*/
+	transform: translate(-10px, -25px); /* position de la photo dans le cadre rond*/
 }
 
 .titre_aside
@@ -117,6 +112,7 @@ a
 {
 	padding-left: 8%;
 	font-weight: bold;
+	overflow-wrap: break-word;
 }
 
 .liste_contact li
@@ -140,6 +136,7 @@ aside p
 {
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 	margin-bottom: 5%;
 	color: #616161;
 }
@@ -208,9 +205,9 @@ h2
 	flex:1; /*permet à la page centrale de prendre tous l'espace disponible en largeur*/
 }
 
-section h2
+.article_page
 {
-	display: none;/* Le titre n'apparait pas, le titre est néanmoins recommandé par le service de validation W3C */
+	margin-right: 30px;
 }
 
 .titre_page /*Contient l'icone et le titre de chaque article*/
@@ -252,6 +249,7 @@ section h2
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 5%;
+	flex-wrap: wrap;
 }
 
 .bloc_puces
@@ -308,6 +306,7 @@ h5
 {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	margin-bottom: 20px;
 	margin-left: 50px;
 	margin-right: 50px;
@@ -325,7 +324,7 @@ p span
 /*----------------TABLETTES---------------------------------------*/
 
 
-@media all and (max-device-width: 900px)
+@media all and (max-width: 900px)
 {
 
 	/*----ORGANISATON GENERALE DE LA PAGE------*/
@@ -394,7 +393,7 @@ p span
 	/*----PAGE CENTRALE------*/
 
 
-	section
+	#corps_page
 	{
 		margin-top: 10px;
 	}
@@ -423,7 +422,7 @@ p span
 
 	#lisere
 	{
-		width: auto;
+		max-width: unset; /*désactive la largeur max fixé à 270px en mode laptop*/
 		order: 2;
 	}
 
@@ -461,10 +460,27 @@ p span
 	}
 
 
+
+	/*-------------------Entre 577 et 700 px ------------------------*/
+	/* Dans cette fourchette besoin de mettre la liste des contact en colonne
+	en transition du passage de la tablette au smartphone*/
+
+	@media all and (max-width: 700px)
+	{
+
+		.liste_contact
+		{
+			display: block;
+			text-align: center;
+		}
+
+	}
+
+
 	/*----------------SMARTPHONES--------------------------------------*/
 
 
-	@media all and (max-device-width: 576px)
+	@media all and (max-width: 576px)
 	{
 
 		#bloc_page
@@ -486,7 +502,17 @@ p span
 
 		h3
 		{
-			margin-left: 0;
+			text-align: center;
+		}
+		
+		.article_page
+		{
+			margin-right: auto; /*en mode smartphone les articles prennent toute la largeur de l'écran*/
+		}
+
+		.icone_article
+		{
+			margin-left: 5%;
 		}
 
 		.titre_page
@@ -494,11 +520,14 @@ p span
 			margin: 0;
 			margin-top: 10%;
 			justify-content: center;
+			align-items: center;
+			padding: 0;
 		}
 
 		.liste_page
 		{
 			margin-left: 0;
+			text-align: center;
 		}
 
 		.item_formation, .item_professionnel
@@ -510,8 +539,10 @@ p span
 
 		.bloc_puces
 		{
-			align-self: center;
 			margin-bottom: 3%;
+			align-items: center;
+			margin-right: auto;
+			margin-left: auto;
 		}
 
 		h5
