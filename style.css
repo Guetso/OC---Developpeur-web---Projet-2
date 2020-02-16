@@ -413,7 +413,6 @@ p span
 
 	.item_recommand
 	{
-		display: flex;
 		justify-content: space-around;
 		margin-top: 15px;
 	}
@@ -492,8 +491,6 @@ p span
 
 		.photo_header
 		{
-			display: block;
-			width: 120%;
 			transform: translate(-12px, -100px);
 		}
 
@@ -552,11 +549,6 @@ p span
 			text-decoration: underline;
 		}
 
-		.paragraphe
-		{
-			text-align: center;
-		}
-
 		.paragraphe p
 
 		{
@@ -564,20 +556,9 @@ p span
 			text-align: justify;
 		}
 
-		.liste_contact
-		{
-			display: block;
-		}
-
-		.liste_contact li
-		{
-			text-align: center;
-		}
-
 		.item_recommand
 		{
-			flex-direction: column;
-			align-items: center;
+			text-align: center;
 		}
 
 	}
