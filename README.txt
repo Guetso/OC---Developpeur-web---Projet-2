@@ -19,3 +19,5 @@ Section PRINCIPALE Ok !
 Ok version desktop OK W3C ok !
 Ajout de la version imprimable
 Ok version mobile !
+
+--Projet 2 terminé--
