@@ -93,9 +93,8 @@ a
 .photo
 {
 	display: block;
-	width: 120%;
-	margin-top: -25px; /* Pourquoi un margin bottom ne fonctionne pas ?*/
-	margin-left: -12px;
+	width: 100%;
+	transform: translate(0, -20px); 
 }
 
 .titre_aside

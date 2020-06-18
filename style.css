@@ -79,7 +79,7 @@ a
 {
 	display: block;
 	max-width: 120%; /*Zoom sur la photo*/
-	transform: translate(-10px, -25px); /* position de la photo dans le cadre rond*/
+	transform: translate(0, -20px); /* position de la photo dans le cadre rond*/
 }
 
 .titre_aside
@@ -385,8 +385,7 @@ p span
 
 	.photo_header
 	{
-		width: 120%;
-		transform: translate(-12px, -80px);
+		transform: translate(0px, -70px);
 	}
 
 
@@ -491,7 +490,7 @@ p span
 
 		.photo_header
 		{
-			transform: translate(-12px, -100px);
+			transform: translate(0px, -90px);
 		}
 
 		h1, h2
