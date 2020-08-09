@@ -41,5 +41,6 @@ Pour explorer le site, rendez vous simplement [ici](https://www.hugohemon.fr/pro
 
 !!! IMPORTANT !!! 
 
-Une version plus récente et à jour de mon CV est visible à cette [adresse](https://www.hugohemon.fr/CV/)
+Une version plus récente et à jour de mon CV est visible à cette [adresse](https://www.hugohemon.fr/CV/).
+
 Un [repo](https://github.com/Guetso/CV) existe également.
