@@ -7,8 +7,8 @@ Ce projet est réalisé dans le cadre du parcours **Développeur Web** du site [
 * [Maquette](docs/maquette.png)
 
 ### Technologies utilisées
-HTML5
-CSS3
+ * HTML5
+ * CSS3
 
 ### Objectifs de la mission
 Scénario:
